@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Your Leaflet code here
 
 // Create a new map instance
 var map = L.map('map').setView([37.8, -96], 4);
