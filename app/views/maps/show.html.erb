@@ -1,0 +1,27 @@
+<!-- <!DOCTYPE html> -->
+<html>
+  <head>
+    <title>Clickable Map of the United States</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <style>
+      #map {
+        height: 500px;
+      }
+      .state {
+        fill: #bada55;
+        stroke: #000;
+        stroke-width: 2;
+      }
+      .state.hover {
+        fill: #f00;
+      }
+    </style>
+    <%= javascript_include_tag 'main' %>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>

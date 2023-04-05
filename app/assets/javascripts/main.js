@@ -1,9 +1,13 @@
-/ Create a new map instance
-var map = L.map('map').setView([37.8, -96], 4)
+document.addEventListener('DOMContentLoaded', function() {
+  // Your Leaflet code here
+
+// Create a new map instance
+var map = L.map('map').setView([37.8, -96], 4);
 
 // Add the tile layer to the map (in this case, we're using OpenStreetMap)
-L.tilelayer('https://{s}.titleopenstreetmap.org/{z}/{x}/{y}.png', 
-{attribution: 'Map data &copy; <a href="https://www.openstreetmaps.org/">OpenStreetMap</a> contributors'}).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+}).addTo(map);
 
 // Define the boundaries of each state Numbers are based on latitude and longitude of each state North, East, South, West
 var stateBoundaries = {
@@ -68,4 +72,5 @@ Object.keys(stateBoundaries).forEach(function(state) {
     window.location.href = "/states/create/" + state; // This should take me to my State#create Action where I can pass off the abbreviation and then store that in the database along with the uploaded picture
   });
   layer.addTo(map)
+});
 });
